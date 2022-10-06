@@ -34,7 +34,7 @@
         },
         "_links": {
           "webui": "/spaces/DUMMY/pages/76513281/AAA?preview=%2F76513281%2F80412673%2Fmock-00.png",
-          "self": "https://ctreminiom.atlassian.net/wiki/rest/api/content/att80412673",
+          "self": "https://ctreminiom.atlassian.net/rest/api/content/att80412673",
           "download": "/download/attachments/76513281/mock-00.png?version=1&modificationDate=1624759632313&cacheVersion=1&api=v2"
         }
       },
@@ -71,7 +71,7 @@
         },
         "_links": {
           "webui": "/spaces/DUMMY/pages/76513281/AAA?preview=%2F76513281%2F78675969%2Fmock.png",
-          "self": "https://ctreminiom.atlassian.net/wiki/rest/api/content/att78675969",
+          "self": "https://ctreminiom.atlassian.net/rest/api/content/att78675969",
           "download": "/download/attachments/76513281/mock.png?version=2&modificationDate=1624689018398&cacheVersion=1&api=v2"
         }
       },
@@ -108,7 +108,7 @@
         },
         "_links": {
           "webui": "/spaces/DUMMY/pages/76513281/AAA?preview=%2F76513281%2F76513298%2FScreenshot_3.png",
-          "self": "https://ctreminiom.atlassian.net/wiki/rest/api/content/att76513298",
+          "self": "https://ctreminiom.atlassian.net/rest/api/content/att76513298",
           "download": "/download/attachments/76513281/Screenshot_3.png?version=1&modificationDate=1624591114024&cacheVersion=1&api=v2"
         }
       },
@@ -145,7 +145,7 @@
         },
         "_links": {
           "webui": "/spaces/DUMMY/pages/76513281/AAA?preview=%2F76513281%2F76513293%2FScreenshot_2.png",
-          "self": "https://ctreminiom.atlassian.net/wiki/rest/api/content/att76513293",
+          "self": "https://ctreminiom.atlassian.net/rest/api/content/att76513293",
           "download": "/download/attachments/76513281/Screenshot_2.png?version=1&modificationDate=1624591111373&cacheVersion=1&api=v2"
         }
       },
@@ -182,7 +182,7 @@
         },
         "_links": {
           "webui": "/spaces/DUMMY/pages/76513281/AAA?preview=%2F76513281%2F76513288%2FScreenshot_1.png",
-          "self": "https://ctreminiom.atlassian.net/wiki/rest/api/content/att76513288",
+          "self": "https://ctreminiom.atlassian.net/rest/api/content/att76513288",
           "download": "/download/attachments/76513281/Screenshot_1.png?version=1&modificationDate=1624591107904&cacheVersion=1&api=v2"
         }
       }
@@ -191,7 +191,7 @@
     "limit": 25,
     "size": 5,
     "_links": {
-      "self": "https://ctreminiom.atlassian.net/wiki/rest/api/content/76513281/child/attachment"
+      "self": "https://ctreminiom.atlassian.net/rest/api/content/76513281/child/attachment"
     }
   },
   "page": {
@@ -221,7 +221,7 @@
           "ancestors": ""
         },
         "_links": {
-          "self": "https://ctreminiom.atlassian.net/wiki/rest/api/content/78708746",
+          "self": "https://ctreminiom.atlassian.net/rest/api/content/78708746",
           "tinyui": "/x/CgCxB",
           "editui": "/pages/resumedraft.action?draftId=78708746",
           "webui": "/spaces/DUMMY/pages/78708746/child"
@@ -232,14 +232,14 @@
     "limit": 25,
     "size": 1,
     "_links": {
-      "self": "https://ctreminiom.atlassian.net/wiki/rest/api/content/76513281/child/page"
+      "self": "https://ctreminiom.atlassian.net/rest/api/content/76513281/child/page"
     }
   },
   "_expandable": {
     "comment": "/rest/api/content/76513281/child/comment"
   },
   "_links": {
-    "self": "https://ctreminiom.atlassian.net/wiki/rest/api/content/76513281/child",
+    "self": "https://ctreminiom.atlassian.net/rest/api/content/76513281/child",
     "base": "https://ctreminiom.atlassian.net/wiki",
     "context": "/wiki"
   }

@@ -18,7 +18,7 @@ func (s *SpacePermissionService) Add(ctx context.Context, spaceKey string, paylo
 		return nil, nil, models.ErrNoSpaceKeyError
 	}
 
-	endpoint := fmt.Sprintf("/wiki/rest/api/space/%v/permission", spaceKey)
+	endpoint := fmt.Sprintf("/rest/api/space/%v/permission", spaceKey)
 
 	payloadAsReader, err := transformStructToReader(payload)
 	if err != nil {
@@ -50,7 +50,7 @@ func (s *SpacePermissionService) Bulk(ctx context.Context, spaceKey string, payl
 		return nil, models.ErrNoSpaceKeyError
 	}
 
-	endpoint := fmt.Sprintf("/wiki/rest/api/space/%v/permission/custom-content", spaceKey)
+	endpoint := fmt.Sprintf("/rest/api/space/%v/permission/custom-content", spaceKey)
 
 	payloadAsReader, err := transformStructToReader(payload)
 	if err != nil {
@@ -82,7 +82,7 @@ func (s *SpacePermissionService) Remove(ctx context.Context, spaceKey string, pe
 		return nil, models.ErrNoSpaceKeyError
 	}
 
-	endpoint := fmt.Sprintf("/wiki/rest/api/space/%v/permission/%v", spaceKey, permissionId)
+	endpoint := fmt.Sprintf("/rest/api/space/%v/permission/%v", spaceKey, permissionId)
 
 	request, err := s.client.newRequest(ctx, http.MethodDelete, endpoint, nil)
 	if err != nil {

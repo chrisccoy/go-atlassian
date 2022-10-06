@@ -47,7 +47,7 @@ func (c *ContentAttachmentService) Gets(ctx context.Context, contentID string, s
 
 	}
 
-	var endpoint = fmt.Sprintf("/wiki/rest/api/content/%v/child/attachment?%v", contentID, query.Encode())
+	var endpoint = fmt.Sprintf("/rest/api/content/%v/child/attachment?%v", contentID, query.Encode())
 
 	request, err := c.client.newRequest(ctx, http.MethodGet, endpoint, nil)
 	if err != nil {
@@ -89,7 +89,7 @@ func (c *ContentAttachmentService) CreateOrUpdate(ctx context.Context, attachmen
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString(fmt.Sprintf("/wiki/rest/api/content/%v/child/attachment", attachmentID))
+	endpoint.WriteString(fmt.Sprintf("/rest/api/content/%v/child/attachment", attachmentID))
 
 	if query.Encode() != "" {
 		endpoint.WriteString(fmt.Sprintf("?%v", query.Encode()))
@@ -153,7 +153,7 @@ func (c *ContentAttachmentService) Create(ctx context.Context, attachmentID, sta
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString(fmt.Sprintf("/wiki/rest/api/content/%v/child/attachment", attachmentID))
+	endpoint.WriteString(fmt.Sprintf("/rest/api/content/%v/child/attachment", attachmentID))
 
 	if query.Encode() != "" {
 		endpoint.WriteString(fmt.Sprintf("?%v", query.Encode()))

@@ -26,7 +26,7 @@ func (l *LabelService) Get(ctx context.Context, labelName, labelType string, sta
 	query.Add("name", labelName)
 	query.Add("type", labelType)
 
-	endpoint := fmt.Sprintf("wiki/rest/api/label?%v", query.Encode())
+	endpoint := fmt.Sprintf("rest/api/label?%v", query.Encode())
 
 	request, err := l.client.newRequest(ctx, http.MethodGet, endpoint, nil)
 	if err != nil {

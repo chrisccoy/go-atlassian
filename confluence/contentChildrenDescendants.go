@@ -38,7 +38,7 @@ func (c *ContentChildrenDescendantService) Children(ctx context.Context, content
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString(fmt.Sprintf("/wiki/rest/api/content/%v/child", contentID))
+	endpoint.WriteString(fmt.Sprintf("/rest/api/content/%v/child", contentID))
 
 	if query.Encode() != "" {
 		endpoint.WriteString(fmt.Sprintf("?%v", query.Encode()))
@@ -97,7 +97,7 @@ func (c *ContentChildrenDescendantService) ChildrenByType(ctx context.Context, c
 		query.Add("parentVersion", strconv.Itoa(parentVersion))
 	}
 
-	var endpoint = fmt.Sprintf("/wiki/rest/api/content/%v/child/%v?%v", contentID, contentType, query.Encode())
+	var endpoint = fmt.Sprintf("/rest/api/content/%v/child/%v?%v", contentID, contentType, query.Encode())
 
 	request, err := c.client.newRequest(ctx, http.MethodGet, endpoint, nil)
 	if err != nil {
@@ -130,7 +130,7 @@ func (c *ContentChildrenDescendantService) Descendants(ctx context.Context, cont
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString(fmt.Sprintf("/wiki/rest/api/content/%v/descendant", contentID))
+	endpoint.WriteString(fmt.Sprintf("/rest/api/content/%v/descendant", contentID))
 
 	if query.Encode() != "" {
 		endpoint.WriteString(fmt.Sprintf("?%v", query.Encode()))
@@ -190,7 +190,7 @@ func (c *ContentChildrenDescendantService) DescendantsByType(ctx context.Context
 		query.Add("depth", depth)
 	}
 
-	var endpoint = fmt.Sprintf("/wiki/rest/api/content/%v/descendant/%v?%v", contentID, contentType, query.Encode())
+	var endpoint = fmt.Sprintf("/rest/api/content/%v/descendant/%v?%v", contentID, contentType, query.Encode())
 
 	request, err := c.client.newRequest(ctx, http.MethodGet, endpoint, nil)
 	if err != nil {
@@ -225,7 +225,7 @@ func (c *ContentChildrenDescendantService) CopyHierarchy(ctx context.Context, co
 		return nil, nil, err
 	}
 
-	var endpoint = fmt.Sprintf("/wiki/rest/api/content/%v/pagehierarchy/copy", contentID)
+	var endpoint = fmt.Sprintf("/rest/api/content/%v/pagehierarchy/copy", contentID)
 
 	request, err := c.client.newRequest(ctx, http.MethodPost, endpoint, payloadAsReader)
 	if err != nil {
@@ -262,7 +262,7 @@ func (c *ContentChildrenDescendantService) CopyPage(ctx context.Context, content
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString(fmt.Sprintf("/wiki/rest/api/content/%v/copy", contentID))
+	endpoint.WriteString(fmt.Sprintf("/rest/api/content/%v/copy", contentID))
 
 	if query.Encode() != "" {
 		endpoint.WriteString(fmt.Sprintf("?%v", query.Encode()))

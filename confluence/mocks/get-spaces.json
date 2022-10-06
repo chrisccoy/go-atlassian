@@ -21,7 +21,7 @@
       },
       "_links": {
         "webui": "/spaces/DS",
-        "self": "https://ctreminiom.atlassian.net/wiki/rest/api/space/DS"
+        "self": "https://ctreminiom.atlassian.net/rest/api/space/DS"
       }
     },
     {
@@ -45,7 +45,7 @@
       },
       "_links": {
         "webui": "/spaces/DUMMY",
-        "self": "https://ctreminiom.atlassian.net/wiki/rest/api/space/DUMMY"
+        "self": "https://ctreminiom.atlassian.net/rest/api/space/DUMMY"
       }
     }
   ],
@@ -55,6 +55,6 @@
   "_links": {
     "base": "https://ctreminiom.atlassian.net/wiki",
     "context": "/wiki",
-    "self": "https://ctreminiom.atlassian.net/wiki/rest/api/space"
+    "self": "https://ctreminiom.atlassian.net/rest/api/space"
   }
 }

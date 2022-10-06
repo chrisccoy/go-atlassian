@@ -65,7 +65,7 @@ func (s *SpaceService) Gets(ctx context.Context, options *model.GetSpacesOptionS
 		}
 	}
 
-	var endpoint = fmt.Sprintf("/wiki/rest/api/space?%v", query.Encode())
+	var endpoint = fmt.Sprintf("/rest/api/space?%v", query.Encode())
 
 	request, err := s.client.newRequest(ctx, http.MethodGet, endpoint, nil)
 	if err != nil {
@@ -102,7 +102,7 @@ func (s *SpaceService) Create(ctx context.Context, payload *model.CreateSpaceSch
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString("/wiki/rest/api/space")
+	endpoint.WriteString("/rest/api/space")
 
 	if private {
 		endpoint.WriteString("/_private")
@@ -141,7 +141,7 @@ func (s *SpaceService) Get(ctx context.Context, spaceKey string, expand []string
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString(fmt.Sprintf("/wiki/rest/api/space/%v", spaceKey))
+	endpoint.WriteString(fmt.Sprintf("/rest/api/space/%v", spaceKey))
 
 	if query.Encode() != "" {
 		endpoint.WriteString(fmt.Sprintf("?%v", query.Encode()))
@@ -176,7 +176,7 @@ func (s *SpaceService) Update(ctx context.Context, spaceKey string, payload *mod
 		return nil, nil, err
 	}
 
-	var endpoint = fmt.Sprintf("/wiki/rest/api/space/%v", spaceKey)
+	var endpoint = fmt.Sprintf("/rest/api/space/%v", spaceKey)
 
 	request, err := s.client.newRequest(ctx, http.MethodPut, endpoint, payloadAsReader)
 	if err != nil {
@@ -205,7 +205,7 @@ func (s *SpaceService) Delete(ctx context.Context, spaceKey string) (result *mod
 		return nil, nil, model.ErrNoSpaceKeyError
 	}
 
-	var endpoint = fmt.Sprintf("/wiki/rest/api/space/%v", spaceKey)
+	var endpoint = fmt.Sprintf("/rest/api/space/%v", spaceKey)
 
 	request, err := s.client.newRequest(ctx, http.MethodDelete, endpoint, nil)
 	if err != nil {
@@ -243,7 +243,7 @@ func (s *SpaceService) Content(ctx context.Context, spaceKey, depth string, expa
 		query.Add("depth", depth)
 	}
 
-	var endpoint = fmt.Sprintf("/wiki/rest/api/space/%v/content?%v", spaceKey, query.Encode())
+	var endpoint = fmt.Sprintf("/rest/api/space/%v/content?%v", spaceKey, query.Encode())
 
 	request, err := s.client.newRequest(ctx, http.MethodGet, endpoint, nil)
 	if err != nil {
@@ -280,7 +280,7 @@ func (s *SpaceService) ContentByType(ctx context.Context, spaceKey, contentType,
 		query.Add("depth", depth)
 	}
 
-	var endpoint = fmt.Sprintf("/wiki/rest/api/space/%v/content/%v?%v", spaceKey, contentType, query.Encode())
+	var endpoint = fmt.Sprintf("/rest/api/space/%v/content/%v?%v", spaceKey, contentType, query.Encode())
 
 	request, err := s.client.newRequest(ctx, http.MethodGet, endpoint, nil)
 	if err != nil {

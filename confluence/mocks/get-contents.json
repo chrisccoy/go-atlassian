@@ -62,7 +62,7 @@
         "space": "/rest/api/space/DUMMY"
       },
       "_links": {
-        "self": "https://ctreminiom.atlassian.net/wiki/rest/api/content/196695",
+        "self": "https://ctreminiom.atlassian.net/rest/api/content/196695",
         "tinyui": "/x/VwAD",
         "editui": "/pages/resumedraft.action?draftId=196695",
         "webui": "/spaces/DUMMY/overview"
@@ -130,7 +130,7 @@
         "space": "/rest/api/space/DUMMY"
       },
       "_links": {
-        "self": "https://ctreminiom.atlassian.net/wiki/rest/api/content/64290817",
+        "self": "https://ctreminiom.atlassian.net/rest/api/content/64290817",
         "tinyui": "/x/AQDVAw",
         "editui": "/pages/resumedraft.action?draftId=64290817",
         "webui": "/spaces/DUMMY/pages/64290817/TEST"
@@ -198,7 +198,7 @@
         "space": "/rest/api/space/DUMMY"
       },
       "_links": {
-        "self": "https://ctreminiom.atlassian.net/wiki/rest/api/content/64290828",
+        "self": "https://ctreminiom.atlassian.net/rest/api/content/64290828",
         "tinyui": "/x/DADVAw",
         "editui": "/pages/resumedraft.action?draftId=64290828",
         "webui": "/spaces/DUMMY/pages/64290828/Confluence+Page+Title"
@@ -266,7 +266,7 @@
         "space": "/rest/api/space/DUMMY"
       },
       "_links": {
-        "self": "https://ctreminiom.atlassian.net/wiki/rest/api/content/65798145",
+        "self": "https://ctreminiom.atlassian.net/rest/api/content/65798145",
         "tinyui": "/x/AQDsAw",
         "editui": "/pages/resumedraft.action?draftId=65798145",
         "webui": "/spaces/DUMMY/pages/65798145/new+page"
@@ -279,6 +279,6 @@
   "_links": {
     "base": "https://ctreminiom.atlassian.net/wiki",
     "context": "/wiki",
-    "self": "https://ctreminiom.atlassian.net/wiki/rest/api/content?expand=operations"
+    "self": "https://ctreminiom.atlassian.net/rest/api/content?expand=operations"
   }
 }

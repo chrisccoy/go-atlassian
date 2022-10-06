@@ -29,7 +29,7 @@ func (c *ContentRestrictionOperationUserService) Get(ctx context.Context, conten
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString(fmt.Sprintf("wiki/rest/api/content/%v/restriction/byOperation/%v/user", contentID, operationKey))
+	endpoint.WriteString(fmt.Sprintf("rest/api/content/%v/restriction/byOperation/%v/user", contentID, operationKey))
 
 	query := url.Values{}
 	query.Add("accountId", accountID)
@@ -69,7 +69,7 @@ func (c *ContentRestrictionOperationUserService) Add(ctx context.Context, conten
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString(fmt.Sprintf("wiki/rest/api/content/%v/restriction/byOperation/%v/user", contentID, operationKey))
+	endpoint.WriteString(fmt.Sprintf("rest/api/content/%v/restriction/byOperation/%v/user", contentID, operationKey))
 
 	query := url.Values{}
 	query.Add("accountId", accountID)
@@ -109,7 +109,7 @@ func (c *ContentRestrictionOperationUserService) Remove(ctx context.Context, con
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString(fmt.Sprintf("wiki/rest/api/content/%v/restriction/byOperation/%v/user", contentID, operationKey))
+	endpoint.WriteString(fmt.Sprintf("rest/api/content/%v/restriction/byOperation/%v/user", contentID, operationKey))
 
 	query := url.Values{}
 	query.Add("accountId", accountID)

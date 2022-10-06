@@ -35,7 +35,7 @@ func (c *ContentCommentService) Gets(ctx context.Context, contentID string, expa
 		query.Add("location", strings.Join(location, ","))
 	}
 
-	var endpoint = fmt.Sprintf("/wiki/rest/api/content/%v/child/comment?%v", contentID, query.Encode())
+	var endpoint = fmt.Sprintf("/rest/api/content/%v/child/comment?%v", contentID, query.Encode())
 
 	request, err := c.client.newRequest(ctx, http.MethodGet, endpoint, nil)
 	if err != nil {

@@ -28,7 +28,7 @@ func (c *ContentRestrictionOperationService) Gets(ctx context.Context, contentID
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString(fmt.Sprintf("wiki/rest/api/content/%v/restriction/byOperation", contentID))
+	endpoint.WriteString(fmt.Sprintf("rest/api/content/%v/restriction/byOperation", contentID))
 
 	query := url.Values{}
 	if len(expand) != 0 {
@@ -75,7 +75,7 @@ func (c *ContentRestrictionOperationService) Get(ctx context.Context, contentID,
 		query.Add("expand", strings.Join(expand, ","))
 	}
 
-	endpoint := fmt.Sprintf("wiki/rest/api/content/%v/restriction/byOperation/%v?%v", contentID, operationKey, query.Encode())
+	endpoint := fmt.Sprintf("rest/api/content/%v/restriction/byOperation/%v?%v", contentID, operationKey, query.Encode())
 
 	request, err := c.client.newRequest(ctx, http.MethodGet, endpoint, nil)
 	if err != nil {

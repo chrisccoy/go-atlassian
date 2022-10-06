@@ -31,7 +31,7 @@ func (c *ContentLabelService) Gets(ctx context.Context, contentID, prefix string
 		query.Add("prefix", prefix)
 	}
 
-	var endpoint = fmt.Sprintf("wiki/rest/api/content/%v/label?%v", contentID, query.Encode())
+	var endpoint = fmt.Sprintf("rest/api/content/%v/label?%v", contentID, query.Encode())
 
 	request, err := c.client.newRequest(ctx, http.MethodGet, endpoint, nil)
 	if err != nil {
@@ -63,7 +63,7 @@ func (c *ContentLabelService) Add(ctx context.Context, contentID string, payload
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString(fmt.Sprintf("/wiki/rest/api/content/%v/label", contentID))
+	endpoint.WriteString(fmt.Sprintf("/rest/api/content/%v/label", contentID))
 
 	query := url.Values{}
 	if want400Response {
@@ -102,7 +102,7 @@ func (c *ContentLabelService) Remove(ctx context.Context, contentID, labelName s
 		return nil, model.ErrNoContentLabelError
 	}
 
-	var endpoint = fmt.Sprintf("/wiki/rest/api/content/%v/label/%v", contentID, labelName)
+	var endpoint = fmt.Sprintf("/rest/api/content/%v/label/%v", contentID, labelName)
 
 	request, err := c.client.newRequest(ctx, http.MethodDelete, endpoint, nil)
 	if err != nil {

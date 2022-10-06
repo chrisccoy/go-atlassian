@@ -29,7 +29,7 @@ func (c *ContentVersionService) Gets(ctx context.Context, contentID string, expa
 		query.Add("expand", strings.Join(expand, ","))
 	}
 
-	endpoint := fmt.Sprintf("wiki/rest/api/content/%v/version?%v", contentID, query.Encode())
+	endpoint := fmt.Sprintf("rest/api/content/%v/version?%v", contentID, query.Encode())
 
 	request, err := c.client.newRequest(ctx, http.MethodGet, endpoint, nil)
 	if err != nil {
@@ -56,7 +56,7 @@ func (c *ContentVersionService) Get(ctx context.Context, contentID string, versi
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString(fmt.Sprintf("wiki/rest/api/content/%v/version/%v", contentID, versionNumber))
+	endpoint.WriteString(fmt.Sprintf("rest/api/content/%v/version/%v", contentID, versionNumber))
 
 	if len(expand) != 0 {
 		query := url.Values{}
@@ -90,7 +90,7 @@ func (c *ContentVersionService) Restore(ctx context.Context, contentID string, p
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString(fmt.Sprintf("wiki/rest/api/content/%v/version", contentID))
+	endpoint.WriteString(fmt.Sprintf("rest/api/content/%v/version", contentID))
 
 	query := url.Values{}
 	if len(expand) != 0 {
@@ -132,7 +132,7 @@ func (c *ContentVersionService) Delete(ctx context.Context, contentID string, ve
 		return nil, models.ErrNoContentIDError
 	}
 
-	endpoint := fmt.Sprintf("wiki/rest/api/content/%v/version/%v", contentID, versionNumber)
+	endpoint := fmt.Sprintf("rest/api/content/%v/version/%v", contentID, versionNumber)
 
 	request, err := c.client.newRequest(ctx, http.MethodDelete, endpoint, nil)
 	if err != nil {

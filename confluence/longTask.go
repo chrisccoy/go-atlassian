@@ -21,7 +21,7 @@ func (l *LongTaskService) Gets(ctx context.Context, start, limit int) (result *m
 	query.Add("start", strconv.Itoa(start))
 	query.Add("limit", strconv.Itoa(limit))
 
-	var endpoint = fmt.Sprintf("/wiki/rest/api/longtask?%v", query.Encode())
+	var endpoint = fmt.Sprintf("/rest/api/longtask?%v", query.Encode())
 
 	request, err := l.client.newRequest(ctx, http.MethodGet, endpoint, nil)
 	if err != nil {
@@ -44,7 +44,7 @@ func (l *LongTaskService) Gets(ctx context.Context, start, limit int) (result *m
 func (l *LongTaskService) Get(ctx context.Context, taskID string) (result *models.LongTaskScheme, response *ResponseScheme,
 	err error) {
 
-	var endpoint = fmt.Sprintf("/wiki/rest/api/longtask/%v", taskID)
+	var endpoint = fmt.Sprintf("/rest/api/longtask/%v", taskID)
 
 	request, err := l.client.newRequest(ctx, http.MethodGet, endpoint, nil)
 	if err != nil {

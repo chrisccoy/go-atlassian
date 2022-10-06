@@ -66,7 +66,7 @@ func (c *ContentService) Gets(ctx context.Context, options *model.GetContentOpti
 
 	}
 
-	var endpoint = fmt.Sprintf("/wiki/rest/api/content?%v", query.Encode())
+	var endpoint = fmt.Sprintf("/rest/api/content?%v", query.Encode())
 
 	request, err := c.client.newRequest(ctx, http.MethodGet, endpoint, nil)
 	if err != nil {
@@ -96,7 +96,7 @@ func (c *ContentService) Create(ctx context.Context, payload *model.ContentSchem
 		return nil, nil, err
 	}
 
-	var endpoint = "/wiki/rest/api/content"
+	var endpoint = "/rest/api/content"
 
 	request, err := c.client.newRequest(ctx, http.MethodPost, endpoint, payloadAsReader)
 	if err != nil {
@@ -139,7 +139,7 @@ func (c *ContentService) Search(ctx context.Context, cql, cqlContext string, exp
 		query.Add("expand", strings.Join(expand, ","))
 	}
 
-	var endpoint = fmt.Sprintf("/wiki/rest/api/content/search?%v", query.Encode())
+	var endpoint = fmt.Sprintf("/rest/api/content/search?%v", query.Encode())
 
 	request, err := c.client.newRequest(ctx, http.MethodGet, endpoint, nil)
 	if err != nil {
@@ -177,7 +177,7 @@ func (c *ContentService) Get(ctx context.Context, contentID string, expand []str
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString(fmt.Sprintf("/wiki/rest/api/content/%v", contentID))
+	endpoint.WriteString(fmt.Sprintf("/rest/api/content/%v", contentID))
 
 	if query.Encode() != "" {
 		endpoint.WriteString(fmt.Sprintf("?%v", query.Encode()))
@@ -213,7 +213,7 @@ func (c *ContentService) Update(ctx context.Context, contentID string, payload *
 		return nil, nil, err
 	}
 
-	var endpoint = fmt.Sprintf("/wiki/rest/api/content/%v", contentID)
+	var endpoint = fmt.Sprintf("/rest/api/content/%v", contentID)
 
 	request, err := c.client.newRequest(ctx, http.MethodPut, endpoint, payloadAsReader)
 	if err != nil {
@@ -250,7 +250,7 @@ func (c *ContentService) Delete(ctx context.Context, contentID, status string) (
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString(fmt.Sprintf("/wiki/rest/api/content/%v", contentID))
+	endpoint.WriteString(fmt.Sprintf("/rest/api/content/%v", contentID))
 
 	if query.Encode() != "" {
 		endpoint.WriteString(fmt.Sprintf("?%v", query.Encode()))
@@ -284,7 +284,7 @@ func (c *ContentService) History(ctx context.Context, contentID string, expand [
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString(fmt.Sprintf("/wiki/rest/api/content/%v/history", contentID))
+	endpoint.WriteString(fmt.Sprintf("/rest/api/content/%v/history", contentID))
 
 	if query.Encode() != "" {
 		endpoint.WriteString(fmt.Sprintf("?%v", query.Encode()))
@@ -316,7 +316,7 @@ func (c *ContentService) Archive(ctx context.Context, payload *model.ContentArch
 		return nil, nil, err
 	}
 
-	endpoint := "/wiki/rest/api/content/archive"
+	endpoint := "/rest/api/content/archive"
 
 	request, err := c.client.newRequest(ctx, http.MethodPost, endpoint, payloadAsReader)
 	if err != nil {

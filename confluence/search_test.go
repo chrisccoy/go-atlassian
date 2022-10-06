@@ -42,7 +42,7 @@ func TestSearchService_Content(t *testing.T) {
 			},
 			mockFile:       "./mocks/search-content.json",
 			wantHTTPMethod: http.MethodGet,
-			endpoint: "/wiki/rest/api/search?cql=type%3Dpage&cqlcontext=spaceKey&cursor=raNDoMsTRiNg&excerpt=" +
+			endpoint: "/rest/api/search?cql=type%3Dpage&cqlcontext=spaceKey&cursor=raNDoMsTRiNg&excerpt=" +
 				"indexed&excludeCurrentSpaces=true&includeArchivedSpaces=true&limit=20&next=true&prev=true&sitePermission" +
 				"TypeFilter=externalCollaborator&start=10",
 			context:            context.Background(),
@@ -67,7 +67,7 @@ func TestSearchService_Content(t *testing.T) {
 			},
 			mockFile:       "./mocks/search-content.json",
 			wantHTTPMethod: http.MethodGet,
-			endpoint: "/wiki/rest/api/search?cql=type%3Dpage&cqlcontext=spaceKey&cursor=raNDoMsTRiNg&excerpt=" +
+			endpoint: "/rest/api/search?cql=type%3Dpage&cqlcontext=spaceKey&cursor=raNDoMsTRiNg&excerpt=" +
 				"indexed&excludeCurrentSpaces=true&includeArchivedSpaces=true&limit=20&next=true&prev=true&sitePermission" +
 				"TypeFilter=externalCollaborator&start=10",
 			context:            context.Background(),
@@ -94,7 +94,7 @@ func TestSearchService_Content(t *testing.T) {
 			},
 			mockFile:       "./mocks/search-content.json",
 			wantHTTPMethod: http.MethodGet,
-			endpoint: "/wiki/rest/api/search?cql=type%3Dpage&cqlcontext=spaceKey&cursor=raNDoMsTRiNg&excerpt=" +
+			endpoint: "/rest/api/search?cql=type%3Dpage&cqlcontext=spaceKey&cursor=raNDoMsTRiNg&excerpt=" +
 				"indexed&excludeCurrentSpaces=true&includeArchivedSpaces=true&limit=20&next=true&prev=true&sitePermission" +
 				"TypeFilter=externalCollaborator&start=10",
 			context:            nil,
@@ -121,7 +121,7 @@ func TestSearchService_Content(t *testing.T) {
 			},
 			mockFile:       "./mocks/search-content.json",
 			wantHTTPMethod: http.MethodGet,
-			endpoint: "/wiki/rest/api/search?cql=type%3Dpage&cqlcontext=spaceKey&cursor=raNDoMsTRiNg&excerpt=" +
+			endpoint: "/rest/api/search?cql=type%3Dpage&cqlcontext=spaceKey&cursor=raNDoMsTRiNg&excerpt=" +
 				"indexed&excludeCurrentSpaces=true&includeArchivedSpaces=true&limit=20&next=true&prev=true&sitePermission" +
 				"TypeFilter=externalCollaborator&start=10",
 			context:            context.Background(),
@@ -148,7 +148,7 @@ func TestSearchService_Content(t *testing.T) {
 			},
 			mockFile:       "./mocks/empty-json.json",
 			wantHTTPMethod: http.MethodGet,
-			endpoint: "/wiki/rest/api/search?cql=type%3Dpage&cqlcontext=spaceKey&cursor=raNDoMsTRiNg&excerpt=" +
+			endpoint: "/rest/api/search?cql=type%3Dpage&cqlcontext=spaceKey&cursor=raNDoMsTRiNg&excerpt=" +
 				"indexed&excludeCurrentSpaces=true&includeArchivedSpaces=true&limit=20&next=true&prev=true&sitePermission" +
 				"TypeFilter=externalCollaborator&start=10",
 			context:            context.Background(),
@@ -249,7 +249,7 @@ func TestSearchService_Users(t *testing.T) {
 			expand:             []string{"operations", "personalSpace"},
 			mockFile:           "./mocks/search-content.json",
 			wantHTTPMethod:     http.MethodGet,
-			endpoint:           "/wiki/rest/api/search/user?cql=type%3Duser&expand=operations%2CpersonalSpace&limit=50&start=10",
+			endpoint:           "/rest/api/search/user?cql=type%3Duser&expand=operations%2CpersonalSpace&limit=50&start=10",
 			context:            context.Background(),
 			wantHTTPCodeReturn: http.StatusOK,
 		},
@@ -262,7 +262,7 @@ func TestSearchService_Users(t *testing.T) {
 			expand:             []string{"operations", "personalSpace"},
 			mockFile:           "./mocks/search-content.json",
 			wantHTTPMethod:     http.MethodGet,
-			endpoint:           "/wiki/rest/api/search/user?cql=type%3Duser&expand=operations%2CpersonalSpace&limit=50&start=10",
+			endpoint:           "/rest/api/search/user?cql=type%3Duser&expand=operations%2CpersonalSpace&limit=50&start=10",
 			context:            context.Background(),
 			wantHTTPCodeReturn: http.StatusOK,
 			wantErr:            true,
@@ -277,7 +277,7 @@ func TestSearchService_Users(t *testing.T) {
 			expand:             []string{"operations", "personalSpace"},
 			mockFile:           "./mocks/search-content.json",
 			wantHTTPMethod:     http.MethodGet,
-			endpoint:           "/wiki/rest/api/search/user?cql=type%3Duser&expand=operations%2CpersonalSpace&limit=50&start=10",
+			endpoint:           "/rest/api/search/user?cql=type%3Duser&expand=operations%2CpersonalSpace&limit=50&start=10",
 			context:            nil,
 			wantHTTPCodeReturn: http.StatusOK,
 			wantErr:            true,
@@ -292,7 +292,7 @@ func TestSearchService_Users(t *testing.T) {
 			expand:             []string{"operations", "personalSpace"},
 			mockFile:           "./mocks/search-content.json",
 			wantHTTPMethod:     http.MethodGet,
-			endpoint:           "/wiki/rest/api/search/user?cql=type%3Duser&expand=operations%2CpersonalSpace&limit=50&start=10",
+			endpoint:           "/rest/api/search/user?cql=type%3Duser&expand=operations%2CpersonalSpace&limit=50&start=10",
 			context:            context.Background(),
 			wantHTTPCodeReturn: http.StatusBadRequest,
 			wantErr:            true,
@@ -307,7 +307,7 @@ func TestSearchService_Users(t *testing.T) {
 			expand:             []string{"operations", "personalSpace"},
 			mockFile:           "./mocks/empty-json.json",
 			wantHTTPMethod:     http.MethodGet,
-			endpoint:           "/wiki/rest/api/search/user?cql=type%3Duser&expand=operations%2CpersonalSpace&limit=50&start=10",
+			endpoint:           "/rest/api/search/user?cql=type%3Duser&expand=operations%2CpersonalSpace&limit=50&start=10",
 			context:            context.Background(),
 			wantHTTPCodeReturn: http.StatusOK,
 			wantErr:            true,

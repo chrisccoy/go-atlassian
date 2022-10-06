@@ -30,7 +30,7 @@ func (c *ContentRestrictionOperationGroupService) Get(ctx context.Context, conte
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString(fmt.Sprintf("wiki/rest/api/content/%v/restriction/byOperation/%v/", contentID, operationKey))
+	endpoint.WriteString(fmt.Sprintf("rest/api/content/%v/restriction/byOperation/%v/", contentID, operationKey))
 
 	// check if the group id is an uuid type
 	// if so, it's the group id
@@ -72,7 +72,7 @@ func (c *ContentRestrictionOperationGroupService) Add(ctx context.Context, conte
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString(fmt.Sprintf("wiki/rest/api/content/%v/restriction/byOperation/%v/", contentID, operationKey))
+	endpoint.WriteString(fmt.Sprintf("rest/api/content/%v/restriction/byOperation/%v/", contentID, operationKey))
 
 	// check if the group id is an uuid type
 	// if so, it's the group id
@@ -114,7 +114,7 @@ func (c *ContentRestrictionOperationGroupService) Remove(ctx context.Context, co
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString(fmt.Sprintf("wiki/rest/api/content/%v/restriction/byOperation/%v/", contentID, operationKey))
+	endpoint.WriteString(fmt.Sprintf("rest/api/content/%v/restriction/byOperation/%v/", contentID, operationKey))
 
 	// check if the group id is an uuid type
 	// if so, it's the group id

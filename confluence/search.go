@@ -66,7 +66,7 @@ func (s *SearchService) Content(ctx context.Context, cql string, options *models
 		}
 	}
 
-	endpoint := fmt.Sprintf("wiki/rest/api/search?%v", query.Encode())
+	endpoint := fmt.Sprintf("rest/api/search?%v", query.Encode())
 
 	request, err := s.client.newRequest(ctx, http.MethodGet, endpoint, nil)
 	if err != nil {
@@ -100,7 +100,7 @@ func (s *SearchService) Users(ctx context.Context, cql string, start, limit int,
 		query.Add("expand", strings.Join(expand, ","))
 	}
 
-	endpoint := fmt.Sprintf("wiki/rest/api/search/user?%v", query.Encode())
+	endpoint := fmt.Sprintf("rest/api/search/user?%v", query.Encode())
 
 	request, err := s.client.newRequest(ctx, http.MethodGet, endpoint, nil)
 	if err != nil {

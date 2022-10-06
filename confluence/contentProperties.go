@@ -29,7 +29,7 @@ func (c *ContentPropertyService) Gets(ctx context.Context, contentID string, exp
 		query.Add("expand", strings.Join(expand, ","))
 	}
 
-	var endpoint = fmt.Sprintf("/wiki/rest/api/content/%v/property?%v", contentID, query.Encode())
+	var endpoint = fmt.Sprintf("/rest/api/content/%v/property?%v", contentID, query.Encode())
 
 	request, err := c.client.newRequest(ctx, http.MethodGet, endpoint, nil)
 	if err != nil {
@@ -60,7 +60,7 @@ func (c *ContentPropertyService) Create(ctx context.Context, contentID string, p
 		return nil, nil, err
 	}
 
-	var endpoint = fmt.Sprintf("/wiki/rest/api/content/%v/property", contentID)
+	var endpoint = fmt.Sprintf("/rest/api/content/%v/property", contentID)
 
 	request, err := c.client.newRequest(ctx, http.MethodPost, endpoint, payloadAsReader)
 	if err != nil {
@@ -91,7 +91,7 @@ func (c *ContentPropertyService) Get(ctx context.Context, contentID, key string)
 		return nil, nil, model.ErrNoContentPropertyError
 	}
 
-	var endpoint = fmt.Sprintf("/wiki/rest/api/content/%v/property/%v", contentID, key)
+	var endpoint = fmt.Sprintf("/rest/api/content/%v/property/%v", contentID, key)
 
 	request, err := c.client.newRequest(ctx, http.MethodGet, endpoint, nil)
 	if err != nil {
@@ -120,7 +120,7 @@ func (c *ContentPropertyService) Delete(ctx context.Context, contentID, key stri
 		return nil, model.ErrNoContentPropertyError
 	}
 
-	var endpoint = fmt.Sprintf("/wiki/rest/api/content/%v/property/%v", contentID, key)
+	var endpoint = fmt.Sprintf("/rest/api/content/%v/property/%v", contentID, key)
 
 	request, err := c.client.newRequest(ctx, http.MethodDelete, endpoint, nil)
 	if err != nil {

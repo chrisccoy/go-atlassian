@@ -9,7 +9,7 @@
         "comment": {
           "value": false,
           "_links": {
-            "self": "https://ctreminiom.atlassian.net/wiki/rest/api/content/80412678/child/comment"
+            "self": "https://ctreminiom.atlassian.net/rest/api/content/80412678/child/comment"
           }
         }
       },
@@ -36,7 +36,7 @@
       },
       "_links": {
         "webui": "/spaces/DUMMY/pages/76513281/AAA?focusedCommentId=80412678#comment-80412678",
-        "self": "https://ctreminiom.atlassian.net/wiki/rest/api/content/80412678"
+        "self": "https://ctreminiom.atlassian.net/rest/api/content/80412678"
       }
     },
     {
@@ -48,7 +48,7 @@
         "comment": {
           "value": false,
           "_links": {
-            "self": "https://ctreminiom.atlassian.net/wiki/rest/api/content/80412685/child/comment"
+            "self": "https://ctreminiom.atlassian.net/rest/api/content/80412685/child/comment"
           }
         }
       },
@@ -75,7 +75,7 @@
       },
       "_links": {
         "webui": "/spaces/DUMMY/pages/76513281/AAA?focusedCommentId=80412685#comment-80412685",
-        "self": "https://ctreminiom.atlassian.net/wiki/rest/api/content/80412685"
+        "self": "https://ctreminiom.atlassian.net/rest/api/content/80412685"
       }
     }
   ],
@@ -85,6 +85,6 @@
   "_links": {
     "base": "https://ctreminiom.atlassian.net/wiki",
     "context": "/wiki",
-    "self": "https://ctreminiom.atlassian.net/wiki/rest/api/content/76513281/child/comment?expand=childTypes.all"
+    "self": "https://ctreminiom.atlassian.net/rest/api/content/76513281/child/comment?expand=childTypes.all"
   }
 }

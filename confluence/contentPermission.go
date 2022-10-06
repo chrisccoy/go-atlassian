@@ -27,7 +27,7 @@ func (c *ContentPermissionService) Check(ctx context.Context, contentID string,
 		return nil, nil, model.ErrNoContentIDError
 	}
 
-	var endpoint = fmt.Sprintf("/wiki/rest/api/content/%v/permission/check", contentID)
+	var endpoint = fmt.Sprintf("/rest/api/content/%v/permission/check", contentID)
 
 	payloadAsReader, err := transformStructToReader(payload)
 	if err != nil {

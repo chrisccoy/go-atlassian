@@ -32,7 +32,7 @@ func (c *ContentRestrictionService) Gets(ctx context.Context, contentID string, 
 		query.Add("expand", strings.Join(expand, ","))
 	}
 
-	endpoint := fmt.Sprintf("wiki/rest/api/content/%v/restriction?%v", contentID, query.Encode())
+	endpoint := fmt.Sprintf("rest/api/content/%v/restriction?%v", contentID, query.Encode())
 
 	request, err := c.client.newRequest(ctx, http.MethodGet, endpoint, nil)
 	if err != nil {
@@ -59,7 +59,7 @@ func (c *ContentRestrictionService) Add(ctx context.Context, contentID string, p
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString(fmt.Sprintf("wiki/rest/api/content/%v/restriction", contentID))
+	endpoint.WriteString(fmt.Sprintf("rest/api/content/%v/restriction", contentID))
 
 	query := url.Values{}
 	if len(expand) != 0 {
@@ -101,7 +101,7 @@ func (c *ContentRestrictionService) Delete(ctx context.Context, contentID string
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString(fmt.Sprintf("wiki/rest/api/content/%v/restriction", contentID))
+	endpoint.WriteString(fmt.Sprintf("rest/api/content/%v/restriction", contentID))
 
 	query := url.Values{}
 	if len(expand) != 0 {
@@ -137,7 +137,7 @@ func (c *ContentRestrictionService) Update(ctx context.Context, contentID string
 	}
 
 	var endpoint strings.Builder
-	endpoint.WriteString(fmt.Sprintf("wiki/rest/api/content/%v/restriction", contentID))
+	endpoint.WriteString(fmt.Sprintf("rest/api/content/%v/restriction", contentID))
 
 	query := url.Values{}
 	if len(expand) != 0 {
