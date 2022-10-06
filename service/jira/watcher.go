@@ -2,7 +2,7 @@ package jira
 
 import (
 	"context"
-	model "github.com/ctreminiom/go-atlassian/pkg/infra/models"
+	model "github.com/chrisccoy/go-atlassian/pkg/infra/models"
 )
 
 // WatcherConnector is an interface that defines the methods available from WatcherConnector API.

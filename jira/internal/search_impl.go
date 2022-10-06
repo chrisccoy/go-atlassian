@@ -1,8 +1,8 @@
 package internal
 
 import (
-	model "github.com/ctreminiom/go-atlassian/pkg/infra/models"
-	"github.com/ctreminiom/go-atlassian/service"
+	model "github.com/chrisccoy/go-atlassian/pkg/infra/models"
+	"github.com/chrisccoy/go-atlassian/service"
 )
 
 func NewSearchService(client service.Client, version string) (*SearchADFService, *SearchRichTextService, error) {

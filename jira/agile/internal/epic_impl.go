@@ -3,9 +3,9 @@ package internal
 import (
 	"context"
 	"fmt"
-	model "github.com/ctreminiom/go-atlassian/pkg/infra/models"
-	"github.com/ctreminiom/go-atlassian/service"
-	"github.com/ctreminiom/go-atlassian/service/agile"
+	model "github.com/chrisccoy/go-atlassian/pkg/infra/models"
+	"github.com/chrisccoy/go-atlassian/service"
+	"github.com/chrisccoy/go-atlassian/service/agile"
 	"net/http"
 	"net/url"
 	"strconv"

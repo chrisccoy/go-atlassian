@@ -2,7 +2,7 @@ package common
 
 import (
 	"context"
-	"github.com/ctreminiom/go-atlassian/pkg/infra/models"
+	"github.com/chrisccoy/go-atlassian/pkg/infra/models"
 	"io"
 	"net/http"
 )

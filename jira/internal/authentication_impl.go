@@ -1,8 +1,8 @@
 package internal
 
 import (
-	"github.com/ctreminiom/go-atlassian/service"
-	"github.com/ctreminiom/go-atlassian/service/common"
+	"github.com/chrisccoy/go-atlassian/service"
+	"github.com/chrisccoy/go-atlassian/service/common"
 )
 
 func NewAuthenticationService(client service.Client) common.Authentication {

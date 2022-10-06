@@ -3,9 +3,9 @@ package internal
 import (
 	"context"
 	"fmt"
-	model "github.com/ctreminiom/go-atlassian/pkg/infra/models"
-	"github.com/ctreminiom/go-atlassian/service"
-	"github.com/ctreminiom/go-atlassian/service/jira"
+	model "github.com/chrisccoy/go-atlassian/pkg/infra/models"
+	"github.com/chrisccoy/go-atlassian/service"
+	"github.com/chrisccoy/go-atlassian/service/jira"
 	"net/http"
 	"net/url"
 	"strconv"
@@ -78,7 +78,7 @@ func (i *IssueFieldContextOptionService) Delete(ctx context.Context, fieldId str
 //
 // PUT /rest/api/{2-3}/field/{fieldId}/context/{contextId}/option/move
 //
-// TODO: The documentation needs to be created, raise a ticket here: https://github.com/ctreminiom/go-atlassian/issues
+// TODO: The documentation needs to be created, raise a ticket here: https://github.com/chrisccoy/go-atlassian/issues
 func (i *IssueFieldContextOptionService) Order(ctx context.Context, fieldId string, contextId int, payload *model.OrderFieldOptionPayloadScheme) (*model.ResponseScheme, error) {
 	return i.internalClient.Order(ctx, fieldId, contextId, payload)
 }

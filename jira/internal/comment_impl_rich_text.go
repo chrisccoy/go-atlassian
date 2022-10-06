@@ -3,9 +3,9 @@ package internal
 import (
 	"context"
 	"fmt"
-	model "github.com/ctreminiom/go-atlassian/pkg/infra/models"
-	"github.com/ctreminiom/go-atlassian/service"
-	"github.com/ctreminiom/go-atlassian/service/jira"
+	model "github.com/chrisccoy/go-atlassian/pkg/infra/models"
+	"github.com/chrisccoy/go-atlassian/service"
+	"github.com/chrisccoy/go-atlassian/service/jira"
 	"net/http"
 	"net/url"
 	"strconv"
@@ -38,7 +38,7 @@ func (c *CommentRichTextService) Gets(ctx context.Context, issueKeyOrId, orderBy
 //
 // GET /rest/api/{2-3}/issue/{issueIdOrKey}/comment/{id}
 //
-// TODO: The documentation needs to be created, raise a ticket here: https://github.com/ctreminiom/go-atlassian/issues
+// TODO: The documentation needs to be created, raise a ticket here: https://github.com/chrisccoy/go-atlassian/issues
 func (c *CommentRichTextService) Get(ctx context.Context, issueKeyOrId, commentId string) (*model.IssueCommentSchemeV2, *model.ResponseScheme, error) {
 	return c.internalClient.Get(ctx, issueKeyOrId, commentId)
 }

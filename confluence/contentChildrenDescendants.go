@@ -3,7 +3,7 @@ package confluence
 import (
 	"context"
 	"fmt"
-	model "github.com/ctreminiom/go-atlassian/pkg/infra/models"
+	model "github.com/chrisccoy/go-atlassian/pkg/infra/models"
 	"net/http"
 	"net/url"
 	"strconv"

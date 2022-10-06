@@ -1,14 +1,14 @@
 <p align="center"><img width="600" src="https://user-images.githubusercontent.com/16035390/131232958-022b0382-e6bc-42db-97b6-82fbd190e19a.png"></p>
 
 <p align="center">
-    <a href="https://github.com/ctreminiom/go-atlassian/releases/latest"><img src="https://img.shields.io/github/v/release/ctreminiom/go-atlassian"></a>
-    <a href="https://pkg.go.dev/github.com/ctreminiom/go-atlassian"><img src="https://pkg.go.dev/badge/github.com/ctreminiom/go-atlassian?utm_source=godoc"></a>
-    <a href="https://goreportcard.com/report/github.com/ctreminiom/go-atlassian"><img src="https://goreportcard.com/badge/ctreminiom/go-atlassian"></a>
+    <a href="https://github.com/chrisccoy/go-atlassian/releases/latest"><img src="https://img.shields.io/github/v/release/chrisccoy/go-atlassian"></a>
+    <a href="https://pkg.go.dev/github.com/chrisccoy/go-atlassian"><img src="https://pkg.go.dev/badge/github.com/chrisccoy/go-atlassian?utm_source=godoc"></a>
+    <a href="https://goreportcard.com/report/github.com/chrisccoy/go-atlassian"><img src="https://goreportcard.com/badge/chrisccoy/go-atlassian"></a>
     <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fctreminiom%2Fgo-atlassian?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fctreminiom%2Fgo-atlassian.svg?type=shield"/></a>
-    <a href="https://codecov.io/gh/ctreminiom/go-atlassian"><img src="https://codecov.io/gh/ctreminiom/go-atlassian/branch/main/graph/badge.svg?token=G0KPNMTIRV"></a>
-    <a href="https://www.codacy.com/gh/ctreminiom/go-atlassian/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ctreminiom/go-atlassian&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/fe5c1b3c9fd64f84989ae51c42803456"/></a>
-    <a href="https://github.com/ctreminiom/go-atlassian/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
-    <a href="https://github.com/ctreminiom/go-atlassian/actions?query=workflow%3ATesting"><img src="https://img.shields.io/github/workflow/status/ctreminiom/go-atlassian/Testing?label=%F0%9F%A7%AA%20tests&style=flat&color=75C46B"></a>
+    <a href="https://codecov.io/gh/chrisccoy/go-atlassian"><img src="https://codecov.io/gh/chrisccoy/go-atlassian/branch/main/graph/badge.svg?token=G0KPNMTIRV"></a>
+    <a href="https://www.codacy.com/gh/chrisccoy/go-atlassian/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=chrisccoy/go-atlassian&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/fe5c1b3c9fd64f84989ae51c42803456"/></a>
+    <a href="https://github.com/chrisccoy/go-atlassian/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+    <a href="https://github.com/chrisccoy/go-atlassian/actions?query=workflow%3ATesting"><img src="https://img.shields.io/github/workflow/status/chrisccoy/go-atlassian/Testing?label=%F0%9F%A7%AA%20tests&style=flat&color=75C46B"></a>
     <a href="https://docs.go-atlassian.io/"><img src="https://img.shields.io/badge/%F0%9F%92%A1%20go-documentation-00ACD7.svg?style=flat"></a>
     <a href="https://bestpractices.coreinfrastructure.org/projects/4861"><img src="https://bestpractices.coreinfrastructure.org/projects/4861/badge"></a> 
     <a href="https://github.com/avelino/awesome-go#third-party-apis"><img src="https://awesome.re/mentioned-badge-flat.svg"></a> 
@@ -29,19 +29,19 @@ If you do not have [Go](https://golang.org/) installed yet, you can find install
 To pull the most recent version of **go-atlassian**, use `go get`.
 
 ```
-go get github.com/ctreminiom/go-atlassian
+go get github.com/chrisccoy/go-atlassian
 ```
 
 Then import the package into your project as you normally would. You can import the following packages
 
 |Package|import path  |
 |--|--|
-|Jira v2|`github.com/ctreminiom/go-atlassian/jira/v2`|
-|Jira v3|`github.com/ctreminiom/go-atlassian/jira/v3`|
-|Jira Agile|`github.com/ctreminiom/go-atlassian/jira/agile`|
-|Jira ITSM|`github.com/ctreminiom/go-atlassian/jira/sm`|
-|Confluence|`github.com/ctreminiom/go-atlassian/confluence`|
-|Cloud Admin|`github.com/ctreminiom/go-atlassian/admin`|
+|Jira v2|`github.com/chrisccoy/go-atlassian/jira/v2`|
+|Jira v3|`github.com/chrisccoy/go-atlassian/jira/v3`|
+|Jira Agile|`github.com/chrisccoy/go-atlassian/jira/agile`|
+|Jira ITSM|`github.com/chrisccoy/go-atlassian/jira/sm`|
+|Confluence|`github.com/chrisccoy/go-atlassian/confluence`|
+|Cloud Admin|`github.com/chrisccoy/go-atlassian/admin`|
 
 Now you're ready to Go.
 

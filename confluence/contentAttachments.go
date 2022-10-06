@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	model "github.com/ctreminiom/go-atlassian/pkg/infra/models"
+	model "github.com/chrisccoy/go-atlassian/pkg/infra/models"
 	"io"
 	"mime/multipart"
 	"net/http"

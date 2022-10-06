@@ -2,7 +2,7 @@ package agile
 
 import (
 	"context"
-	model "github.com/ctreminiom/go-atlassian/pkg/infra/models"
+	model "github.com/chrisccoy/go-atlassian/pkg/infra/models"
 )
 
 // BoardConnector represents the Jira boards.

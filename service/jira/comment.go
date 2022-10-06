@@ -2,7 +2,7 @@ package jira
 
 import (
 	"context"
-	model "github.com/ctreminiom/go-atlassian/pkg/infra/models"
+	model "github.com/chrisccoy/go-atlassian/pkg/infra/models"
 )
 
 type CommentRichTextConnector interface {
@@ -19,7 +19,7 @@ type CommentRichTextConnector interface {
 	//
 	// GET /rest/api/{2-3}/issue/{issueIdOrKey}/comment/{id}
 	//
-	// TODO: The documentation needs to be created, raise a ticket here: https://github.com/ctreminiom/go-atlassian/issues
+	// TODO: The documentation needs to be created, raise a ticket here: https://github.com/chrisccoy/go-atlassian/issues
 	Get(ctx context.Context, issueKeyOrId, commentId string) (*model.IssueCommentSchemeV2, *model.ResponseScheme, error)
 
 	// Add adds a comment to an issue.
@@ -44,7 +44,7 @@ type CommentADFConnector interface {
 	//
 	// GET /rest/api/{2-3}/issue/{issueIdOrKey}/comment/{id}
 	//
-	// TODO: The documentation needs to be created, raise a ticket here: https://github.com/ctreminiom/go-atlassian/issues
+	// TODO: The documentation needs to be created, raise a ticket here: https://github.com/chrisccoy/go-atlassian/issues
 	Get(ctx context.Context, issueKeyOrId, commentId string) (*model.IssueCommentScheme, *model.ResponseScheme, error)
 
 	// Add adds a comment to an issue.

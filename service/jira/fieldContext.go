@@ -2,7 +2,7 @@ package jira
 
 import (
 	"context"
-	model "github.com/ctreminiom/go-atlassian/pkg/infra/models"
+	model "github.com/chrisccoy/go-atlassian/pkg/infra/models"
 )
 
 //FieldContextOptionConnector
@@ -69,7 +69,7 @@ type FieldContextConnector interface {
 	//
 	// GET /rest/api/{2-3}/field/{fieldId}/context/issuetypemapping
 	//
-	// Docs: TODO: The documentation needs to be created, raise a ticket here: https://github.com/ctreminiom/go-atlassian/issues
+	// Docs: TODO: The documentation needs to be created, raise a ticket here: https://github.com/chrisccoy/go-atlassian/issues
 	IssueTypesContext(ctx context.Context, fieldId string, contextIds []int, startAt, maxResults int) (*model.IssueTypeToContextMappingPageScheme,
 		*model.ResponseScheme, error)
 
@@ -81,7 +81,7 @@ type FieldContextConnector interface {
 	//
 	// GET /rest/api/{2-3}/field/{fieldId}/context/projectmapping
 	//
-	// Docs: TODO: The documentation needs to be created, raise a ticket here: https://github.com/ctreminiom/go-atlassian/issues
+	// Docs: TODO: The documentation needs to be created, raise a ticket here: https://github.com/chrisccoy/go-atlassian/issues
 	ProjectsContext(ctx context.Context, fieldId string, contextIds []int, startAt, maxResults int) (*model.CustomFieldContextProjectMappingPageScheme,
 		*model.ResponseScheme, error)
 
@@ -183,6 +183,6 @@ type FieldContextOptionConnector interface {
 	//
 	// PUT /rest/api/{2-3}/field/{fieldId}/context/{contextId}/option/move
 	//
-	// TODO: The documentation needs to be created, raise a ticket here: https://github.com/ctreminiom/go-atlassian/issues
+	// TODO: The documentation needs to be created, raise a ticket here: https://github.com/chrisccoy/go-atlassian/issues
 	Order(ctx context.Context, fieldId string, contextId int, payload *model.OrderFieldOptionPayloadScheme) (*model.ResponseScheme, error)
 }
